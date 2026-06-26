@@ -1,4 +1,5 @@
 const tiles = document.querySelectorAll('.tiles');
+const playerTurn = document.querySelector('#playerTurn');
 
 let board = [
     '', '', '',
@@ -90,7 +91,7 @@ tiles.forEach((tile, index) => {
             }, 50);
             return;
         }
-
+ 
         // ==========================
         // CEK DRAW
         // ==========================
@@ -106,7 +107,20 @@ tiles.forEach((tile, index) => {
         // ==========================
 
         state = state === 'O' ? 'X' : 'O';
-
+        playerTurn.innerHTML = state; 
     });
 
 });
+
+// ==========================
+// Reset Board
+// ==========================
+
+const resetBtn = document.querySelector('.reset-button');
+resetBtn.addEventListener('click', ()=>{
+    if (confirm("Reset Board?")) {
+        alert("Board Has Been Reset!");
+        resetBoard();
+    }
+});
+

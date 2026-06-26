@@ -6,6 +6,24 @@ body{
     align-items: center;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reset-button{
+    padding: 10px;
+    margin-bottom: 10px;
+    color: aqua;
+    background-color: blue;
+}
+
+h1{
+    color: white;
+}
+
 .board{
     height: 450px;
     width: 450px;
